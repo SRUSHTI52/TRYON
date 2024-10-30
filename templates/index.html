@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try On New Glasses!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(to right, #001f3f, #0074D9);
+            color: #333;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+            padding-bottom: 20px;
+            color: #007BFF; /* Deep blue title */
+        }
+        .video-container {
+            overflow: hidden;
+            border-radius: 10px;
+            border: 3px solid #007BFF;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+        }
+        .video-container img {
+            width: 100%;
+            height: auto;
+            max-width: 640px;
+        }
+        .instructions {
+            text-align: left;
+            background-color: rgba(0, 123, 255, 0.1); /* Light blue background for instructions */
+            padding: 15px;
+            border-radius: 8px;
+            color: #333;
+        }
+        .instructions h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #007BFF;
+        }
+        .instructions p {
+            font-size: 1em;
+            line-height: 1.5;
+            margin: 8px 0;
+        }
+        .instructions ul {
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Try On New Glasses!</h1>
+        <div class="video-container">
+            <img src="{{ url_for('video_feed') }}" alt="Live Video Feed">
+        </div>
+        <div class="instructions">
+            <h2>Instructions</h2>
+            <p>Welcome to the virtual try-on app! Here’s how to operate it:</p>
+            <ul>
+                <li><strong>Switch Glasses:</strong> Move your hand near the <em>Next Glasses</em> button displayed on the screen to change the glasses overlay.</li>
+                <li><strong>Capture Photo:</strong> Move your hand near the <em>Capture</em> button to save the current frame with the glasses overlay as an image.</li>
+                <li><strong>Live Feed:</strong> The video feed will show your face with the selected glasses overlay in real-time.</li>
+            </ul>
+            <p>Enjoy trying on different styles, and capture the look you love!</p>
+        </div>
+    </div>
+</body>
+</html>
+
